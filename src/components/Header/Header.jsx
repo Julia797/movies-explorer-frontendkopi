@@ -1,6 +1,7 @@
 import './Header.css';
 import { Link } from 'react-router-dom';
 import logo from '../../images/header-logo.svg';
+import burger from '../../images/header-burger.svg';
 
 function Header({ nameHeader, userEmail }) {
   
@@ -18,20 +19,22 @@ function Header({ nameHeader, userEmail }) {
   );*/
 // переделать на нав
   return (
-    <header className="header header_themeBlue">
+    <header className="header header_themeBlue indent">
       <img className="header__logo" src={logo} alt="логотип сайта"/>
-      <ul class="header__navigation">
-          <li><a href="#" class="header__films">Фильмы</a></li>
-          <li><a href="#" class="header__films-save link">Сохранённые фильмы</a></li>
+      <ul className="header__navigation">
+          <li><a href="#" className="header__films">Фильмы</a></li>
+          <li><a href="#" className="header__films-save link">Сохранённые фильмы</a></li>
         </ul>
      
-      <p className="header__userEmail">userEmail</p>
+      <p className="header__account">Аккаунт</p>
      
 
-      <ul class="header__loginRegistration">
-          <li><a href="#" class="header__registration active_link">Регистрация</a></li>
-          <li><a href="#" class="header__login link">Войти</a></li>
+      <ul className="header__loginRegistration">
+          <li><a href="#" className="header__registration active_link">Регистрация</a></li>
+          <li><a href="#" className="header__login link">Войти</a></li>
         </ul>
+
+        <img className="header__burger" src={burger} alt="кнопка"/>
     </header>
   );
 }
